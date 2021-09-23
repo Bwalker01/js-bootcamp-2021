@@ -1,0 +1,1 @@
+document.getElementById("dateNow").innerHTML = new Date();

@@ -1,6 +1,8 @@
 CMD Commands:
 	git init - Initialises a git repo in current directory
+	git add [file/directory] - Adds the given file/folder to the git repo tracking
 	git commit -m "[message]" [file/directory/.] - Commits the given file/folder to the staging repo
 	git push -u origin [branch] - Pushes the current staging for the branch to that branch for the origin
+	
 
 Git Commands:
