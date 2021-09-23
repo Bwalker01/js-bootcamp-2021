@@ -55,6 +55,9 @@ Data Types:
         array[0] = "John"
         array[1] = "Lauren"
         array.push(item) - Adds item to the end of array
+        Multi Dimensional Array:
+            multiArray = [["array1 item1", "array1 item2"],["array2 item1","array2 item2"]]
+            mutliArray[0][1] - Returns 'array1 item2'
     
     Objects:
         object = {
@@ -65,3 +68,13 @@ Data Types:
         Can contain multiple data types (including arrays or other objects)
         console.log(object.name) - Logs "Name" to console
         object.aliases[0] = "Rick" - Will change the first item in aliases to "Rick"
+        Can contain functions (use 'this.' to refer to one of its properties)
+
+
+JSON:
+    Received from backend server
+    Can compile large data into strings for easier transfer:
+        JSON.stringify(object)
+    Can return JSON back into an object:
+        JSON.parse(objectString)
+    Cant stringify an object containing a function
