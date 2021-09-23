@@ -40,12 +40,12 @@ Data Types:
 
     Null:
         let variable = null;
-        Sets the variable as empty.
+        Sets the variable as empty. (different from undefined)
 
     Undefined:
         let variable = undefined;
         let variable;
-        Both of these make the variable undefined
+        Both of these make the variable undefined. (different from empty)
 
     Arrays:
         array = ["John","Lauren","Art"]
@@ -64,3 +64,4 @@ Data Types:
         }
         Can contain multiple data types (including arrays or other objects)
         console.log(object.name) - Logs "Name" to console
+        object.aliases[0] = "Rick" - Will change the first item in aliases to "Rick"
