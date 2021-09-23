@@ -1,8 +1,14 @@
-CMD Commands:
+Git Commands:
 	git init - Initialises a git repo in current directory
 	git add [file/directory] - Adds the given file/folder to the git repo tracking
 	git commit -m "[message]" [file/directory/.] - Commits the given file/folder to the staging repo
-	git push -u origin [branch] - Pushes the current staging for the branch to that branch for the origin
-	
+	git push -u origin [branch] - Pushes the current staging for the branch to that branch for the origin (git push - For every occasion after for that branch)
+	git branch [name] - Creates a new branch with given name
+	git checkout [branch] - Changes to given branch
+	git checkout -b [name] - Creates new branch with name and immediately moves to it
 
-Git Commands:
+CMD Commands:
+	cd [file/directory] - Navigates into given file/directory
+	cd .. - Navigates back a directory
+	dir - Lists all files/directories in current
+	dir/ah - Lists all files/directories in current including hidden ones
