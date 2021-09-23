@@ -1,0 +1,66 @@
+__JS Stuff__
+
+It is good practice to put ; after each line to denote the end. 
+(e.g:
+    let variable = "string";
+)
+
+Comments:
+    // - makes a single line comment
+    /* 
+    */ - Double line comment
+
+Variables:
+    Variables need to be in Camel Case (e.g: firstName)
+    Variables can start with a letter, $, or _ (e.g: name, $animal, _age)
+    var - creates app-wide variable (bad)
+    let - creates file-wide variable (good)
+    const - creates file-wide variable that can't be changed (also good)
+    typeof - gets the type of the given variable
+
+Data Types:
+    Numbers:
+        12
+        Includes integers, decimals, negatives (e.g: 12, 1.2, -12)
+        _ can be put between larger numbers (e.g: 100_000_000)
+        Operations (+ - * / etc) can be performed on numbers
+
+    Strings:
+        "This is a string!"
+        "12" counts as a string but should be a number (without quotes)
+        + can be performed but causes concatenation ("One" + "Two" = "OneTwo")
+        Adding numbers and strings makes the number a string and concatenates (e.g: "12" + 2 = "122")
+        String literals:
+            Using `` can make strings with ${variable} inside (e.g: `The variable is ${variable}`)
+            String literals can be used over multiple lines
+
+    Booleans:
+        true/false - Lower case & without quotes
+        Denotes whether a condition happens or doesn't
+
+    Null:
+        let variable = null;
+        Sets the variable as empty.
+
+    Undefined:
+        let variable = undefined;
+        let variable;
+        Both of these make the variable undefined
+
+    Arrays:
+        array = ["John","Lauren","Art"]
+        Can contain multiple data types (e.g: [12, "Hello", 6.44]) including another array or objects
+        Order is guaranteed
+        0-index-based (First item is at index 0) (e.g: [0:"John", 1:"Lauren", 2:"Art"])
+        array[0] = "John"
+        array[1] = "Lauren"
+        array.push(item) - Adds item to the end of array
+    
+    Objects:
+        object = {
+            name: "Name",
+            age: age,
+            aliases: ["alias1","alias2"]
+        }
+        Can contain multiple data types (including arrays or other objects)
+        console.log(object.name) - Logs "Name" to console
