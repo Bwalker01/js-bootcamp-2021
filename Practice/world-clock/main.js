@@ -1,58 +1,7 @@
-const places = [
-  {
-    name: "Kingston",
-    country: "Jamaica",
-    timezoneHours: -5,
-    timezoneMinutes: 0,
-    DST: false,
-  },
-  {
-    name: "Baltimore",
-    country: "Maryland USA",
-    timezoneHours: -4,
-    timezoneMinutes: 0,
-    DST: true,
-  },
-  {
-    name: "Differdange",
-    country: "Luxembourg",
-    timezoneHours: 2,
-    timezoneMinutes: 0,
-    DST: true,
-  },
-  {
-    name: "Leeds",
-    country: "England",
-    timezoneHours: 1,
-    timezoneMinutes: 0,
-    DST: true,
-  },
-  {
-    name: "Melbourne",
-    country: "Victoria Australia",
-    timezoneHours: 10,
-    timezoneMinutes: 0,
-    DST: true,
-  },
-  {
-    name: "Strasbourg",
-    country: "France",
-    timezoneHours: 2,
-    timezoneMinutes: 0,
-    DST: true,
-  },
-  {
-    name: "Adelaide",
-    country: "South Australia",
-    timezoneHours: 9,
-    timezoneMinutes: 30,
-    DST: true,
-  },
-];
-
 let place = places[Math.floor(Math.random() * places.length)];
+let city = place.name[Math.floor(Math.random() * place.name.length)];
 
-const renderTime = function (place) {
+const renderTime = function (place, city) {
   let time = new Date();
   formattedTime = {
     hours: time.getHours(),
@@ -96,10 +45,8 @@ const renderTime = function (place) {
   document.getElementById(
     "time"
   ).innerHTML = `${time.hours}:${time.minutes}:${time.seconds}`;
-  document.getElementById(
-    "place"
-  ).innerHTML = `${place.name}, ${place.country}`;
+  document.getElementById("place").innerHTML = `${city}, ${place.country}`;
 };
 
-renderTime(place);
-setInterval(renderTime, 1000, place);
+renderTime(place, city);
+setInterval(renderTime, 1000, place, city);
