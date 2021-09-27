@@ -260,7 +260,11 @@ console.log(places);
 const person = {
   name: "John",
   address: {
-    street: "21 Main Street",
+    street: {
+      number: 21,
+      line1: "Main Street",
+      line2: "The Burrows",
+    },
     city: "London",
     postCode: "L1 5TS",
   },
