@@ -6,6 +6,8 @@ Git Commands:
 	git branch [name] - Creates a new branch with given name
 	git checkout [branch] - Changes to given branch
 	git checkout -b [name] - Creates new branch with name and immediately moves to it
+	git fetch - Gets all information on relevant branches to the current
+	git pull - 'Pulls' down all updates from the current branch (may result in merge conflicts)
 
 CMD Commands:
 	cd [file/directory] - Navigates into given file/directory
