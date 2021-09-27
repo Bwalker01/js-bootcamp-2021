@@ -1,7 +1,6 @@
 console.log(0);
-console.log(1);
 nums = [0, 1];
-for (let i = 2; i < 10; i++) {
-  nums.push(nums[i - 2] + nums[i - 1]);
-  console.log(nums[i]);
+while (nums[1] < 50) {
+  console.log(nums[1]);
+  nums.push(nums.shift() + nums[0]);
 }
