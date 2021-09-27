@@ -199,6 +199,17 @@ console.log(numbers);
 
 let animals = ["lion", "Zebra", "turtle"];
 
+//If Statement
+/* if (a === b) {
+  return 0;
+} else if (a > b) {
+  return 1;
+} else {
+  return -1;
+} */
+// --OR
+// return a == b ? 0 : a > b ? 1 : -1;
+
 console.log(
   animals.sort(function (a, b) {
     let aL = a.toLowerCase();
@@ -287,13 +298,45 @@ const [bathroom] = rooms; //This will always return first one in array
 console.log(bathroom);
 console.log(rooms);
 
-//If Statement
-/* if (a === b) {
-  return 0;
-} else if (a > b) {
-  return 1;
+//Operators
+let firstNum = 1;
+console.log(firstNum);
+
+// --Add
+firstNum = firstNum + 1;
+// -- --OR
+firstNum++;
+console.log(firstNum);
+
+firstNum == firstNum + 2;
+firstNum += 2;
+console.log(firstNum);
+
+// --Subtract
+firstNum = firstNum - 1;
+// -- --OR
+firstNum--;
+console.log(firstNum);
+
+firstNum = firstNum - 2;
+firstNum -= firstNum;
+console.log(firstNum);
+
+// --Modulus
+let sum = 10 % 2;
+console.log(sum);
+
+// --Equality
+let classSize = "12";
+if (classSize == 12) {
+  console.log(true);
 } else {
-  return -1;
-} */
-// --OR
-// return a == b ? 0 : a > b ? 1 : -1;
+  console.log(false);
+}
+
+// -- --Strict Equality
+if (classSize === 12) {
+  console.log(true);
+} else {
+  console.log(false);
+}
