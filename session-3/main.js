@@ -225,7 +225,7 @@ places.push({
 });
 
 // Pop
-const bristol = places.pop();
+const bristol = places.pop(); //Removes from end
 console.log(bristol);
 
 places.push({
@@ -233,6 +233,56 @@ places.push({
   population: 1_000_000,
 });
 console.log(places);
+
+places.push({
+  //Adds to end
+  name: "Lisbon",
+  population: 100,
+});
+console.log(places);
+
+places.push({
+  name: "Spain",
+  population: 10,
+});
+
+const barcelona = places.shift(); //Removes from front
+console.log(barcelona);
+
+places.unshift({
+  //Adds to front
+  name: "Germany",
+  population: 1_000_000_000,
+});
+console.log(places);
+
+// Object Destructuring
+const person = {
+  name: "John",
+  address: {
+    street: "21 Main Street",
+    city: "London",
+    postCode: "L1 5TS",
+  },
+  hobbies: ["sports", "films", "music"],
+  dob: "01/06/1990",
+};
+
+const { name, hobbies } = person;
+console.log(name);
+console.log(hobbies);
+
+const {
+  address: { street, postCode },
+} = person;
+console.log(street);
+console.log(postCode);
+
+const rooms = ["kitchen", "bathroom"];
+const [bathroom] = rooms; //This will always return first one in array
+console.log(bathroom);
+console.log(rooms);
+
 //If Statement
 /* if (a === b) {
   return 0;
