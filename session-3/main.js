@@ -180,3 +180,66 @@ const hasFrenchPlayers = footballTeams.filter((team) =>
   team.nationalities.includes("French")
 );
 console.log(hasFrenchPlayers);
+
+// --Sort
+let letters = ["z", "a", "q", "w", "e", "r", "t", "y"];
+console.log(letters.sort());
+
+let numbers = [45, 36, 74, 4, 35, 64, 3, 63, 7, 33, 6];
+console.log(numbers);
+const sortedNumbers = numbers.sort(function (a, b) {
+  if (a > b) {
+    return 1;
+  } else if (a === b) {
+    return 0;
+  }
+  return -1;
+});
+console.log(numbers);
+
+let animals = ["lion", "Zebra", "turtle"];
+
+console.log(
+  animals.sort(function (a, b) {
+    let aL = a.toLowerCase();
+    let bL = b.toLowerCase();
+    return aL == bL ? 0 : aL > bL ? 1 : -1;
+  })
+);
+
+// Length & Index Of
+console.log(animals.length);
+console.log(animals.indexOf("lion"));
+
+// Push
+let places = [];
+
+places.push({
+  name: "Barcelona",
+  population: 10_000_000,
+});
+
+places.push({
+  name: "Bristol",
+  population: 500_000,
+});
+
+// Pop
+const bristol = places.pop();
+console.log(bristol);
+
+places.push({
+  name: "Leeds",
+  population: 1_000_000,
+});
+console.log(places);
+//If Statement
+/* if (a === b) {
+  return 0;
+} else if (a > b) {
+  return 1;
+} else {
+  return -1;
+} */
+// --OR
+// return a == b ? 0 : a > b ? 1 : -1;
