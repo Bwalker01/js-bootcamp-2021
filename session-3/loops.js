@@ -19,3 +19,16 @@ console.log(nums);
 /* for (;;) {
   console.log("Hi");
 } */
+
+let ovenOn = true;
+let time = 0;
+
+while (ovenOn) {
+  if (time === 10000) {
+    ovenOn = false;
+    console.log("Finished baking.");
+  } else {
+    console.log(10000 - time, "loops left.");
+    time += 1;
+  }
+}

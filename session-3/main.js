@@ -218,6 +218,21 @@ console.log(
   })
 );
 
+// forEach
+films = ["Scary Movie", "Avengers", "Green Mile", "Saw", "Django"];
+films.forEach((film, index) => {
+  console.log(index, film);
+});
+
+//Chaining
+films
+  .sort()
+  .map((film) => film.toUpperCase())
+  .filter((film) => film.includes(" "))
+  .forEach((film) => console.log(film));
+
+// LOWER ORDER FUNCTIONS
+
 // Length & Index Of
 console.log(animals.length);
 console.log(animals.indexOf("lion"));
