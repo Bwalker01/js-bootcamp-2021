@@ -73,5 +73,5 @@ console.log(nemo);
 
 const des = zoo?.describe?.();
 console.log(des);
-const getBears = zoo?.giveBears?.() || "There are no bears in the zoo";
-console.log(getBears);
+const allBears = zoo?.getBears?.() || "There are no bears in the zoo";
+console.log(allBears);
