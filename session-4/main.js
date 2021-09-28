@@ -75,3 +75,34 @@ const des = zoo?.describe?.();
 console.log(des);
 const allBears = zoo?.getBears?.() || "There are no bears in the zoo";
 console.log(allBears);
+
+// ============== SCOPE ==============
+let num = 1;
+
+if (num > 0) {
+  let num = 2;
+  console.log("Num inside is", num);
+}
+
+console.log("Num outside is", num);
+
+//Defining again inside a code block will make it local to that
+
+if (num) {
+  num = 3;
+}
+
+console.log("Num is now", num);
+
+//Defining outside and referencing inside is still allowed and will use the outside version
+
+const num2 = 1;
+
+if (num2) {
+  const num2 = 2;
+  console.log("Const inside is", num2);
+}
+
+console.log("Const outside is", num2);
+
+//Const works the same way but cannot be changed (constant)
