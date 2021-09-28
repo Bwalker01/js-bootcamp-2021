@@ -56,7 +56,7 @@ console.log(food);
 
 // Chaining Operator (Optional Chaining)
 const zoo = {
-  lions: ["leo"],
+  lions: ["Leo"],
   zooKeeper: ["Brenda"],
   bears: ["Jackson"],
   describe() {
