@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock, Paper, Scissors</title>
+  </head>
+  <body>
+    <h1>Rock, Paper, Scissors</h1>
+    <input type="button" value="Rock" onclick="play('Rock')" />
+    <input type="button" value="Paper" onclick="play('Paper')" />
+    <input type="button" value="Scissors" onclick="play('Scissors')" />
+    <h2>You chose:</h2>
+    <h3 id="users"></h3>
+    <h2>I chose:</h2>
+    <h3 id="comps"></h3>
+    <h2 id="winner"></h2>
+    <h2>Scores:</h2>
+    <h3 id="scores"></h3>
+    <table>
+      <tr>
+        <th>Your score</th>
+        <td id="userScore">0</td>
+      </tr>
+      <tr>
+        <th>My score</th>
+        <td id="compScore">0</td>
+      </tr>
+    </table>
+    <script src="rps.js"></script>
+  </body>
+</html>
