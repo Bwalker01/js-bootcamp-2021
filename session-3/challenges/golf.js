@@ -24,6 +24,3 @@ strokes === 1
   : strokes === par + 2
   ? console.log(names[5])
   : console.warn(names[6]);
-
-let myObj = { firstName: "John", lastName: "Doe" };
-console.warn(myObj);
