@@ -52,3 +52,45 @@ createPerson("John", "Wick", "London", "0113 768538", "L1 5PX");
 // ============ Spread Operator ================
 
 // Deep and Shallow Copy
+// Shallow copy - changes everything about the variable saved under both names
+// Deep copy - take the contents of the variable and saves it elsewhere
+const numbers = [0, 1, 2, 3];
+const copyOfNumbers = numbers; //Shallow copy
+
+copyOfNumbers[0] = 99; //Both numbers and copyOfNumbers are changed
+
+console.log("Numbers => ", numbers);
+console.log("copyOfNumbers =>", copyOfNumbers);
+
+//Copy with spread operator
+const copyOfNumbersES6 = [...numbers]; //Deep copy
+copyOfNumbersES6[0] = 77; // Only copyOfNumbersES6 is changed
+console.log("Numbers => ", numbers);
+console.log("copyOfNumbersES6 =>", copyOfNumbersES6);
+
+// ---With Objects
+
+const person = {
+  name: "John",
+  address: {
+    places: ["A", "B"],
+    coordinates: {
+      long: 99,
+      lat: 88,
+    },
+  },
+};
+const copiedPerson = { ...person };
+
+copiedPerson.name = "Foo";
+console.log(person);
+console.log(copiedPerson);
+
+// At a higher level in the nested objects it will make a shallow copy
+copiedPerson.address.places.push("C");
+
+console.log(person);
+console.log(copiedPerson);
+
+address = { ...copiedPerson.address };
+console.log(address);
