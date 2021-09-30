@@ -127,7 +127,7 @@ const makeCoffee = (
     `Coffee ${coffeeType}, Coffee Options ${JSON.stringify(coffeeOptions)}`
   );
   let coffeeMessage = "";
-  if (coffeeType === "cappucino" || coffeeType === "americano") {
+  if (coffeeType === "cappuccino" || coffeeType === "americano") {
     coffeeOptions.toppings.forEach(function (topping) {
       coffeeMessage += `added ${topping}, `;
     });
@@ -139,7 +139,7 @@ const makeCoffee = (
   return coffeeMessage;
 };
 
-const coffeeType = "cappucino";
+const coffeeType = "cappuccino";
 const coffeeOptions = {
   toppings: ["vanilla", "cream"],
   hasMilk: true,
