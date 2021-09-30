@@ -22,3 +22,21 @@ try {
   value = 0;
   console.error(`${err.message} -- ${err.cause}`);
 }
+
+const returnNum = (param) => {
+  try {
+    check(param);
+    return param;
+  } catch (err) {
+    console.error(`${err.message} ---- ${err.cause}`);
+  }
+};
+
+const check = (param) => {
+  if (typeof param !== "number") {
+    throw new Error("Parameter isn't a number.", { cause: param });
+  }
+};
+
+g = returnNum("T");
+console.log(g);
