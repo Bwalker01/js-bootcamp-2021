@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom Object Model</title>
+  </head>
+  <body>
+    <h1 id="heading" onclick="headingListener()">Document Object Model Demo</h1>
+    <p id="lorem" class="paragraph">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex perferendis
+      totam minus, fugiat sapiente error amet ullam, quas nesciunt eum fugit
+      dolores quibusdam. Ipsa rerum, fugiat corporis voluptatibus sapiente
+      accusamus!
+    </p>
+    <ol id="myList">
+      <li id="item1" class="item">Item 1</li>
+      <li id="item2" class="item">Item 2</li>
+      <li id="item3" class="item">Item 3</li>
+      <li id="item4" class="item">Item 4</li>
+      <li id="item5" class="item">Item 5</li>
+    </ol>
+    <button id="listAdderBtn">CLick Me!</button>
+    <div id="imagecont">
+      <img
+        onmouseenter="changeimage1()"
+        onmouseleave="changeimage2()"
+        onmousedown="changeimage3()"
+        onmouseup="changeimage1()"
+        data-custom-image-name="myImage"
+        src="../Practice/rock-paper-scissors/Scissors.png"
+        alt="Scissors"
+      />
+    </div>
+    <script src="dom.js"></script>
+  </body>
+</html>
