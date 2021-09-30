@@ -1,33 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock, Paper, Scissors</title>
   </head>
   <body>
-    <h1>Rock, Paper, Scissors</h1>
-    <input type="button" value="Rock" onclick="play('Rock')" />
-    <input type="button" value="Paper" onclick="play('Paper')" />
-    <input type="button" value="Scissors" onclick="play('Scissors')" />
-    <h2>You chose:</h2>
-    <h3 id="users"></h3>
-    <h2>I chose:</h2>
-    <h3 id="comps"></h3>
-    <h2 id="winner"></h2>
-    <h2>Scores:</h2>
-    <h3 id="scores"></h3>
-    <table>
+    <div id="optionButtons">
+      <table id="here">
+        <tr>
+          <td>
+            <input
+              id="inp1"
+              type="image"
+              src="Rock.png"
+              onclick="play('Rock')"
+            /><br />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input
+              id="inp2"
+              type="image"
+              src="Paper.png"
+              onclick="play('Paper')"
+            /><br />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input
+              id="inp3"
+              type="image"
+              src="Scissors.png"
+              onclick="play('Scissors')"
+            /><br />
+          </td>
+        </tr>
+      </table>
+    </div>
+    <table id="inputs">
       <tr>
-        <th>Your score</th>
-        <td id="userScore">0</td>
+        <td><h2 id="hdr">YOU</h2></td>
+        <td><h2 id="hdr">COMP</h2></td>
       </tr>
       <tr>
-        <th>My score</th>
-        <td id="compScore">0</td>
+        <td><div id="users"></div></td>
+        <td><div id="comps"></div></td>
+      </tr>
+      <tr>
+        <td><div id="userScore">0</div></td>
+        <td><div id="compScore">0</div></td>
       </tr>
     </table>
+    <h2 id="winner"></h2>
     <script src="rps.js"></script>
   </body>
 </html>
