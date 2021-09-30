@@ -61,3 +61,7 @@ changeimage3 = () => {
   document.querySelector("[data-custom-image-name]").src =
     "../Practice/rock-paper-scissors/Scissors.png";
 };
+
+logMe = () => {
+  console.log(this);
+};
