@@ -40,3 +40,15 @@ const check = (param) => {
 
 g = returnNum("T");
 console.log(g);
+
+//More Object Configuration
+
+const createPerson = (firstName, lastName, ...details) => {
+  console.log(`firstName: ${firstName}, details: ${details}`, details);
+};
+
+createPerson("John", "Wick", "London", "0113 768538", "L1 5PX");
+
+// ============ Spread Operator ================
+
+// Deep and Shallow Copy
