@@ -6,15 +6,6 @@ function play(userChoice) {
   document.getElementById("inp2").disabled = true;
   document.getElementById("inp3").disabled = true;
   console.log("User: ", userChoice);
-  if (document.getElementById("u")) {
-    ani = document
-      .getElementById("u")
-      .animate([{ opacity: 1 }, { opacity: 0 }], 500);
-    ani.onfinish = () => {
-      return false;
-    };
-    while (ani.onfinish()) {}
-  }
   document.getElementById(
     "users"
   ).innerHTML = `<img src='${userChoice}.png' class="center" id="u">`;
@@ -24,10 +15,6 @@ function play(userChoice) {
     ani = document
       .getElementById("c")
       .animate([{ opacity: 1 }, { opacity: 0 }], 500);
-    ani.onfinish = () => {
-      return false;
-    };
-    while (ani.onfinish()) {}
   }
   document.getElementById(
     "comps"
@@ -53,7 +40,9 @@ function play(userChoice) {
     document.getElementById("compScore").innerText = compScore;
     console.log("Computer wins");
   }
-  document.getElementById("inp1").disabled = false;
-  document.getElementById("inp2").disabled = false;
-  document.getElementById("inp3").disabled = false;
+  setTimeout(() => {
+    document.getElementById("inp1").disabled = false;
+    document.getElementById("inp2").disabled = false;
+    document.getElementById("inp3").disabled = false;
+  }, 500);
 }
