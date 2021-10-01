@@ -11,9 +11,9 @@ const looper = (argument) => {
 
 //Example
 
-const makeDrink = (callback) => {
+const makeDrink = (temp, callback, drink) => {
   setTimeout(() => {
-    callback(console.log("Making drink"));
+    callback(console.log(`Making ${temp} ${drink}`));
   }, 3000);
 };
 
@@ -27,7 +27,7 @@ const makeBurger = () => {
 
 const orderMeal = () => {
   makeBurger();
-  makeDrink(makeFries);
+  makeDrink("hot", makeFries, "coffee");
 };
 
 orderMeal();
