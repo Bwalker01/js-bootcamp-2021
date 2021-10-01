@@ -13,12 +13,13 @@ const looper = (argument) => {
 
 const makeDrink = (temp, callback, drink) => {
   setTimeout(() => {
-    callback(console.log(`Making ${temp} ${drink}`));
+    console.log(`Making ${temp} ${drink}`);
+    callback(temp); //The callback will be called to signify the previous code is done.
   }, 3000);
 };
 
-const makeFries = () => {
-  console.log("Making fries");
+const makeFries = (temp) => {
+  console.log(`Making ${temp} fries`); //The callback in makeDrink passes the temp down the makeFries function
 };
 
 const makeBurger = () => {
@@ -27,7 +28,7 @@ const makeBurger = () => {
 
 const orderMeal = () => {
   makeBurger();
-  makeDrink("hot", makeFries, "coffee");
+  makeDrink("hot", makeFries, "coffee"); //makeFries is given as the callback so will be run when callback is called.
 };
 
 orderMeal();
