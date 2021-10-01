@@ -1,3 +1,4 @@
+/*
 console.log("Session 6");
 
 //Callback Functions
@@ -32,3 +33,15 @@ const orderMeal = () => {
 };
 
 orderMeal();
+
+*/
+
+document
+  .querySelector("#fruitsId")
+  .addEventListener("change", function (event) {
+    const selectedValue = event.target.value;
+
+    if (selectedValue !== "-1") {
+      console.log(selectedValue);
+    }
+  });
