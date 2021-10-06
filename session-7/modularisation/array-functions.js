@@ -18,4 +18,8 @@ export const existsInArr = (arr, val) => {
   }
 };
 
+export const reverseArr = (arr) => {
+  return arr.reverse();
+};
+
 //export { sumAllNumbers };
