@@ -22,4 +22,20 @@ export const reverseArr = (arr) => {
   return arr.reverse();
 };
 
+export class Car {
+  constructor(engineSize, make, manufacturer) {
+    this.engineSize = engineSize;
+    this.make = make;
+    this.manufacturer = manufacturer;
+  }
+
+  setEngineSize(engineSize) {
+    this.engineSize = engineSize;
+  }
+
+  getEngineSize() {
+    return this.engineSize;
+  }
+}
+
 //export { sumAllNumbers };
