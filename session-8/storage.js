@@ -25,3 +25,4 @@ localStorage.removeItem("cutlery");
 sessionStorage.setItem("id", 239874);
 
 //Cookies
+document.cookie = `name=Joldo; expires=` + new Date(2021, 9, 8);
