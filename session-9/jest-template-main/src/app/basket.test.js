@@ -4,7 +4,7 @@ describe("Shopping Basket: ", () => {
   let shoppingBasket; //Letting this be used within the scope of this 'Describe' block
 
   beforeEach(() => {
-    //Logic to run before each test within this block
+    //Logic to run before each test within this block (setup)
     shoppingBasket = new ShoppingBasket();
   });
 
@@ -24,5 +24,10 @@ describe("Shopping Basket: ", () => {
     //Assert
     expect(shoppingBasket.items.length).toBe(1); //Tests that the length is only one
     expect(shoppingBasket.items).toContain(item); //Tests that it contains the word 'Apple'
+  });
+
+  afterEach(() => {
+    //Code to run after each test is completed
+    shoppingBasket = null; //Resets the variable each time (teardown)
   });
 });
