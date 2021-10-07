@@ -10,14 +10,12 @@ describe("Shopping Basket: ", () => {
 
   test("Should initialise with zero items", () => {
     //Testing within given parameters
-    const shoppingBasket = new ShoppingBasket();
 
     expect(shoppingBasket.items.length).toBe(0);
   });
 
   test("Should add itme to shopping basket", () => {
     //Arrange
-    const shoppingBasket = new ShoppingBasket();
     const item = "Apples";
 
     //Act
