@@ -6,7 +6,6 @@ const weatherResult = document.querySelector(".weather-result");
 const temperatureHeading = document.getElementById("temperature");
 const locationNameHeading = document.getElementById("locationName");
 const weatherIcon = document.querySelector("#weather-icon");
-
 const submitBtn = document.querySelector(".submit-btn");
 
 const getWeather = async (event) => {
@@ -17,20 +16,31 @@ const getWeather = async (event) => {
 
   try {
     const response = await fetch(requestUrl);
+    resp = await response.json();
+    console.log(resp);
     const {
-      location: { name },
+      location: { name, country },
       current: {
         temp_c,
         condition: { icon },
       },
-    } = await response.json();
-    console.log();
+    } = resp;
+    temperatureHeading.innerHTML = `${temp_c}&deg;C`;
+    locationNameHeading.innerHTML = `${name}, ${country}`;
+    weatherIcon.src = icon;
+    if (icon.includes("night")) {
+      document.body.style.backgroundColor = "darkblue";
+      console.log("night");
+    } else if (icon.includes("day")) {
+      document.body.style.backgroundColor = "#FFFF60";
+      console.log("day");
+    } else {
+      document.body.style.backgroundColor = "black";
+      console.log("Can't tell.");
+    }
   } catch (err) {
     console.error(err);
   }
-  temperatureHeading.innerHTML = `${temp_c}&deg;C`;
-  locationNameHeading.innerHTLM = name;
-  weatherIcon.src = icon;
 };
 
 submitBtn.addEventListener("click", getWeather);
