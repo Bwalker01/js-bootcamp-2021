@@ -1,6 +1,6 @@
 export const celToFahr = (arg) => {
   if (typeof arg !== "number") {
-    throw new Error("Input must be a number", { cause: arg });
+    throw new Error("Input must be a number");
   }
 
   const result = (arg * 9) / 5 + 32;
@@ -10,7 +10,7 @@ export const celToFahr = (arg) => {
 
 export const fahrToCel = (arg) => {
   if (typeof arg !== "number") {
-    throw new Error("Input must be a number", { cause: arg });
+    throw new Error("Input must be a number");
   }
 
   const result = (arg - 32) * (5 / 9);
