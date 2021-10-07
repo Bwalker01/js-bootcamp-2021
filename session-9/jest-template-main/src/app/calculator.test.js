@@ -44,7 +44,7 @@ describe("Calculator:", () => {
   });
 });
 
-describe.skip("Calculator:", () => {
+describe("Calculator:", () => {
   describe("Totalling Arrays:", () => {
     describe("Valid Inputs: ", () => {
       it("Should total the array", () => {

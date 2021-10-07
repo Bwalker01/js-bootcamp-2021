@@ -14,7 +14,7 @@ describe("Shopping Basket: ", () => {
     expect(shoppingBasket.items.length).toBe(0);
   });
 
-  test("Should add itme to shopping basket", () => {
+  test("Should add item to shopping basket", () => {
     //Arrange
     const item = "Apples";
 
@@ -24,6 +24,12 @@ describe("Shopping Basket: ", () => {
     //Assert
     expect(shoppingBasket.items.length).toBe(1); //Tests that the length is only one
     expect(shoppingBasket.items).toContain(item); //Tests that it contains the word 'Apple'
+  });
+
+  test("Should remove item from basket", () => {
+    shoppingBasket.addItems("Board");
+    expect(shoppingBasket.items).toContain("Board");
+    shoppingBasket;
   });
 
   afterEach(() => {
