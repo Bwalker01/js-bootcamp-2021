@@ -1,6 +1,6 @@
 import { ShoppingBasket } from "./basket";
 
-describe("Shopping Basket: ", () => {
+describe.skip("Shopping Basket: ", () => {
   let shoppingBasket; //Letting this be used within the scope of this 'Describe' block
 
   beforeEach(() => {

@@ -8,7 +8,7 @@ Validate passwords to ensure that:
 
 import { validatePassword } from "./validate-password";
 
-describe("Validate Password", () => {
+describe.skip("Validate Password", () => {
   describe("False Returns", () => {
     it("should return false when password is empty", () => {
       expect(validatePassword("")).toBe(false);

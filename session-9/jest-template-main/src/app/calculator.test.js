@@ -1,6 +1,6 @@
 import { addAllNumbers, divideNumbers } from "./calculator";
 
-test("Should add all numbers", () => {
+test.skip("Should add all numbers", () => {
   // AAA - Arrange, Act, Assert
 
   //ARRANGE:
@@ -13,7 +13,7 @@ test("Should add all numbers", () => {
   expect(result).toBe(6);
 });
 
-test("Should divide both numbers", () => {
+test.skip("Should divide both numbers", () => {
   const num1 = 2;
   const num2 = 2;
 
@@ -22,7 +22,7 @@ test("Should divide both numbers", () => {
   expect(result).toBe(1);
 });
 
-describe("Calculator:", () => {
+describe.skip("Calculator:", () => {
   it("Should add all numbers", () => {
     const arr = [1, 5, 8];
     const result = addAllNumbers(arr);
@@ -44,7 +44,7 @@ describe("Calculator:", () => {
   });
 });
 
-describe("Calculator:", () => {
+describe.skip("Calculator:", () => {
   describe("Totalling Arrays:", () => {
     describe("Valid Inputs: ", () => {
       it("Should total the array", () => {
