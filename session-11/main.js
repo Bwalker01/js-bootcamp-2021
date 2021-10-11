@@ -9,4 +9,4 @@ It was searching for a mouse to eat`;
 
 const atRE = /at/g;
 
-console.log(atRE.exec(phrase));
+console.log(atRE.test(phrase));
