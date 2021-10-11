@@ -1,12 +1,12 @@
 export const toRomNum = (num) => {
   const numVals = [
-    ("M", 1000),
-    ("D", 500),
-    ("C", 100),
-    ("L", 50),
-    ("X", 10),
-    ("V", 5),
-    ("I", 1),
+    ["M", 1000],
+    ["D", 500],
+    ["C", 100],
+    ["L", 50],
+    ["X", 10],
+    ["V", 5],
+    ["I", 1],
   ];
 
   let start;
@@ -17,5 +17,5 @@ export const toRomNum = (num) => {
       break;
     }
   }
-  return start;
+  return numVals[start][0];
 };
