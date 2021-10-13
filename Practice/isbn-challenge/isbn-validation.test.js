@@ -1,8 +1,10 @@
 import { expect, it } from "@jest/globals";
+import expectExport from "expect";
 import {
   isValid10String,
   isValid13String,
   checkISBN10Code,
+  checkISBN13Code,
 } from "./isbn-validation.js";
 
 describe("ISBN Validators", () => {
@@ -118,7 +120,7 @@ describe("ISBN Validators", () => {
       });
     });
   });
-  describe("Verifying the check digit (ISBN 10)", () => {
+  describe("Verifying the check digit (ISBN-10)", () => {
     describe("Invalid Inputs", () => {
       it("Should throw an error for invalid codes", () => {
         expect(() => {
@@ -131,6 +133,12 @@ describe("ISBN Validators", () => {
           checkISBN10Code("1 7 5 8 0 54 3 8 3");
         }).toThrow();
       });
+      it("Should return False for codes with an invalid check digit", () => {
+        expect(checkISBN10Code("0471958693")).toBe(false);
+        expect(checkISBN10Code("0 471 60695 5")).toBe(false);
+        expect(checkISBN10Code("0-470-84525-1")).toBe(false);
+        expect(checkISBN10Code("0-321-14653-8")).toBe(false);
+      });
     });
     describe("Valid Inputs", () => {
       it("Should return True for a valid code", () => {
@@ -138,6 +146,42 @@ describe("ISBN Validators", () => {
         expect(checkISBN10Code("0 471 60695 2")).toBe(true);
         expect(checkISBN10Code("0-470-84525-2")).toBe(true);
         expect(checkISBN10Code("0-321-14653-0")).toBe(true);
+      });
+      it("Should return True for a valid code with a check digit of 10 (X)", () => {
+        expect(checkISBN10Code("938472923X")).toBe(true);
+        expect(checkISBN10Code("938472923x")).toBe(true);
+      });
+    });
+  });
+  describe("Verifying the check digit (ISBN-13)", () => {
+    describe("Invalid Inputs", () => {
+      it("Should throw an error for invalid codes", () => {
+        expect(() => {
+          checkISBN13Code("AAAAAAAAAAAAAAAA");
+        }).toThrow();
+        expect(() => {
+          checkISBN13Code("9 78 0 4 700 590 29");
+        }).toThrow();
+        expect(() => {
+          checkISBN13Code("97-80-13-149%505-0");
+        }).toThrow();
+      });
+      it("Should return false for a code with an invalid check digit", () => {
+        expect(checkISBN13Code("978047005902X")).toBe(false);
+        expect(checkISBN13Code("978-0-262-13472-3")).toBe(false);
+        expect(checkISBN13Code("978-8-352-13472-8")).toBe(false);
+        expect(checkISBN13Code("1230475659023")).toBe(false);
+      });
+    });
+    describe("Valid Inputs", () => {
+      it("Should return True for a valid code", () => {
+        expect(checkISBN13Code("9780470059029")).toBe(true);
+        expect(checkISBN13Code("978-0596809485")).toBe(true);
+        expect(checkISBN13Code("978-0-262-13472-9")).toBe(true);
+      });
+      it("Should return True for a valid code with a check digit of 10 (X)", () => {
+        expect(checkISBN13Code("978 0 471 48648 X")).toBe(true);
+        expect(checkISBN13Code("978-0-13-149505-X")).toBe(true);
       });
     });
   });
