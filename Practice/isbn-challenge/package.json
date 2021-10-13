@@ -1,14 +1,19 @@
 {
-  "name": "isbn-challenge",
+  "name": "jest-template",
   "version": "1.0.0",
-  "description": "",
-  "main": "isbn-validation.js",
+  "description": "A simple boilerplate jest environment project that allows use of es6 import/export",
+  "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --verbose",
+    "coverage": "jest --coverage"
   },
-  "author": "",
+  "author": "Assad Ahmad",
   "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.15.4",
+    "jest": "^27.1.0"
+  },
   "dependencies": {
-    "jest": "^27.2.5"
+    "@types/jest": "^27.0.1"
   }
 }
