@@ -1,5 +1,3 @@
-import { expect, it } from "@jest/globals";
-import expectExport from "expect";
 import {
   isValid10String,
   isValid13String,

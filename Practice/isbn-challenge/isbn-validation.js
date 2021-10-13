@@ -1,5 +1,3 @@
-import { expect } from "@jest/globals";
-
 export const isValid10String = (code) => {
   const regExp = /^[0-9]\s?-?[0-9]{3}\s?-?[0-9]{5}\s?-?[0-9X]$/;
   return regExp.test(code.toUpperCase());
