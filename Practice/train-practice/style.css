@@ -1,0 +1,15 @@
+#form {
+  width: 90%;
+  margin: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  border: 3px black solid;
+}
+
+#form.formlabel {
+  grid-column: 0;
+}
+
+#form.formInput {
+  grid-column: 1;
+}
